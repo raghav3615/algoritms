@@ -2,6 +2,9 @@
 
 // Given an integer n, return true if n is an ugly number.
 
+#include <iostream>
+using namespace std;
+
 class Solution {
 public:
     bool isUgly(int n) 
@@ -14,6 +17,20 @@ public:
             else if (n % 5 == 0) n = n / 5;
             else break;
         }
-        return (n == 1);
+        return n == 1;
     }
 };
+
+int main() {
+    Solution sol;
+    int n;
+    cout << "Enter a number: ";
+    cin >> n;
+    if (sol.isUgly(n))
+        cout << n << " is an ugly number." << endl;
+    else
+        cout << n << " is not an ugly number." << endl;
+    return 0;
+}   
+
+
