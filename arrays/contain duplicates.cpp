@@ -3,14 +3,13 @@ using namespace std;
 
 int main () {
     vector<int> arr = {1, 2, 3, 4, 5, 3};
+    sort(arr.begin(), arr.end());
 
-    unordered_set<int> counter;
-    for (int num : arr) {
-        if (counter.find(num) != counter.end()) {
+    for (int i = 1; i < arr.size(); i++) {
+        if (arr[i] == arr[i - 1]) {
             cout << "Array contains duplicates." << endl;
             return 0;
         }
-        counter.insert(num);
     }
     cout << "Array does not contain duplicates." << endl;
     return 0;
