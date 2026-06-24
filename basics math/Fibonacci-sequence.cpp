@@ -3,6 +3,8 @@
 // F(0) = 0, F(1) = 1
 // F(n) = F(n - 1) + F(n - 2), for n > 1.
 // Given n, calculate F(n).
+#include <bits/stdc++.h>
+using namespace std;
 
 class Solution {
 public:
@@ -17,3 +19,15 @@ public:
         return b;
     }
 };
+
+int main() {
+    Solution sol;
+
+    int n;
+    cout << "Enter n: ";
+    cin >> n;
+
+    cout << sol.fib(n) << endl;
+
+    return 0;
+}
