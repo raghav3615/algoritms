@@ -12,4 +12,4 @@ int main() {
     }
     cout << rev;
     return 0;
-}
+}    
